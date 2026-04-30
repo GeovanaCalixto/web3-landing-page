@@ -1,0 +1,87 @@
+/* Variáveis para consistência de cor */
+:root {
+    --laranja-google: #ef8867;
+    --dark-bg: #3d3a3a;
+    --text-white: #ffffff;
+    --tag-bg: #e8f0fe;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* Capa: Ocupa toda a lateral (100% width) com altura controlada */
+.capa-projeto {
+    position: relative;
+    width: 100%; /* Expande na lateral conforme solicitado */
+    height: 350px; /* Altura ajustada para não ser "grande demais" */
+    overflow: hidden;
+}
+
+.capa-projeto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem não distorça */
+}
+
+.overlay-titulo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    width: 100%;
+    color: white;
+}
+
+/* Tags Iguais às da Home para Fluidez Visual */
+.tag {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.web3-bg { background-color: #bb86fc; color: #000; }
+.estratégia-bg { background-color: var(--tag-bg); color: #1a73e8; }
+
+/* Player de Áudio Laranja */
+.audio-section {
+    background-color: var(--laranja-google);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 30px 0;
+    text-align: center;
+    color: white;
+}
+
+/* Botão de Mensagem Moderno e Arredondado */
+.btn-enviar {
+    background-color: var(--laranja-google);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px; /* Borda bem arredondada conforme solicitado */
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #d87656;
+    transform: translateY(-2px); /* Efeito moderno de elevação */
+}
+
+/* Estilo do Formulário */
+.form-comentarios input, .form-comentarios textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Inputs também arredondados */
+}

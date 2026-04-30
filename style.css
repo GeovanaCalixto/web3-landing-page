@@ -1,0 +1,185 @@
+/* Layout Geral */
+body {
+    font-family: 'Google Sans', Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #fef7e0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Menu Lateral */
+.sidebar {
+    width: 270px;
+    background-color: #ef8867;
+    color: #3d3a3a;
+    padding: 40px 20px; /* Reduzi um pouco o padding lateral para ganhar espaço */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Garante que a barra vá até o final da tela */
+}
+
+/* Ajuste da Lista */
+.sidebar ul {
+    list-style: none;
+    padding: 0;       /* Remove o recuo que jogava o menu para a frente */
+    width: 100%;      /* Faz a lista ocupar a largura da sidebar */
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;        /* Cria o espaçamento entre os itens */
+}
+
+/* Estilização dos Links (Aqui resolve o azul) */
+.sidebar ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #3d3a3a;        /* Define a cor igual ao seu texto */
+    font-weight: 500;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Um brilho branco suave */
+    color: #000;
+}
+
+
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #3d3a3a;
+    margin-bottom: 15px;
+}
+
+.menu-buttons {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #3d3a3a;
+}
+
+.btn-menu:hover {
+    background-color: #e8f0fe;
+    color: #1967d2;
+}
+
+/* Grade de Projetos (4 por linha) */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Aqui está a mágica das 4 colunas */
+    gap: 20px;
+}
+
+.card {
+    background: #3d3a3a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Estilização do Botão dos Cards */
+.btn-project {
+    background-color: transparent; /* Fundo transparente para destacar a borda */
+    color: #ef8867;  
+    text-decoration: none;              /* Cor do texto combinando com a sidebar */
+    border: 3px solid #ef8867;     /* Aumentei para 3px (espessura) */
+    padding: 8px 16px;
+    border-radius: 20px;           /* Deixa o botão arredondado (estilo Google) */
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
+    width: 100%;                   /* Faz o botão ocupar a largura do card */
+}
+
+/* Efeito de preenchimento ao passar o mouse */
+.btn-project:hover {
+    background-color: #ef8867;
+    color: #ffffff;
+}
+
+/* Etiquetas (Tags) */
+.tag {
+    display: inline-block; /* Garante que o fundo apareça corretamente */
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;    /* Dá um espaço entre a tag e o título do card */
+}
+
+/* Cores das Tags */
+.web3-bg { 
+    background-color: #e8f0fe; 
+    color: #1967d2; 
+}
+
+.code-bg { 
+    background-color: #fef7e0; 
+    color: #f9ab00; 
+}
+
+/* Tag para IA (caso você use no futuro) */
+.ia-bg {
+    background-color: #e6fffa;
+    color: #008673;
+}
+
+
+:root {
+    --primary-orange: #ff8c00; /* Laranja vibrante */
+    --hover-orange: #e67e22;
+}
+
+/* Rodapé sem a linha divisória */
+.footer-contact {
+    width: 100%;
+    padding: 60px 0; /* Mais espaço para ficar clean */
+    display: flex;
+    flex-direction: column; /* Botão em cima, ícone embaixo */
+    align-items: center;
+    gap: 30px;
+}
+
+/* Botão Laranja Flexível */
+.contact-btn {
+    background-color: #ef8867;
+    color: #3d3a3a;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.contact-btn:hover {
+    background-color: #fef7e0;
+    transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+/* Removendo a seta flutuante antiga se você não quiser mais ela na lateral */
+.back-to-top {
+    display: none; 
+}
