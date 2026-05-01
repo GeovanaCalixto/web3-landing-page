@@ -86,27 +86,29 @@ body {
 }
 
 .card {
-    background: #3d3a3a;
-    color: #ffffff;
-    padding: 20px;
+    background-color: #3d3a3a;
+    color:#fef7e0;
     border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    justify-content: space-between; /* Empurra o botão para o final e o texto para o topo */
+    min-height: 250px; /* Garante que todos os cards tenham o mesmo tamanho */
+    transition: transform 0.3s ease;
 }
 
 /* Estilização do Botão dos Cards */
 .btn-project {
-    background-color: transparent; /* Fundo transparente para destacar a borda */
-    color: #ef8867;  
-    text-decoration: none;              /* Cor do texto combinando com a sidebar */
-    border: 3px solid #ef8867;     /* Aumentei para 3px (espessura) */
-    padding: 8px 16px;
-    border-radius: 20px;           /* Deixa o botão arredondado (estilo Google) */
-    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ef8867; /* O laranja que você gostou */
+    color: #3d3a3a;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
     font-weight: bold;
-    transition: 0.3s;
-    margin-top: 10px;
-    width: 100%;                   /* Faz o botão ocupar a largura do card */
+    margin-top: auto; /* Garante que ele sempre "grude" na parte de baixo */
+    align-self: flex-start; /* Mantém o botão alinhado à esquerda dentro do card */               /* Faz o botão ocupar a largura do card */
 }
 
 /* Efeito de preenchimento ao passar o mouse */
@@ -130,6 +132,11 @@ body {
 .web3-bg { 
     background-color: #e8f0fe; 
     color: #1967d2; 
+}
+
+.Marketing-Estratégico { 
+    background-color: #e8f0fe; 
+    color: #452E5A; 
 }
 
 .code-bg { 
@@ -165,6 +172,7 @@ body {
     color: #3d3a3a;
     padding: 15px 35px;
     border: none;
+    text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
     font-size: 1.1rem;
