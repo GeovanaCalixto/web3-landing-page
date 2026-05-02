@@ -17,28 +17,35 @@ body {
     width: 270px;
     background-color: #ef8867;
     color: #3d3a3a;
-    padding: 40px 20px; /* Reduzi um pouco o padding lateral para ganhar espaço */
+    padding: 40px 20px;
+    /* Reduzi um pouco o padding lateral para ganhar espaço */
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Garante que a barra vá até o final da tela */
+    min-height: 100vh;
+    /* Garante que a barra vá até o final da tela */
 }
 
 /* Ajuste da Lista */
 .sidebar ul {
     list-style: none;
-    padding: 0;       /* Remove o recuo que jogava o menu para a frente */
-    width: 100%;      /* Faz a lista ocupar a largura da sidebar */
+    padding: 0;
+    /* Remove o recuo que jogava o menu para a frente */
+    width: 100%;
+    /* Faz a lista ocupar a largura da sidebar */
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 15px;        /* Cria o espaçamento entre os itens */
+    gap: 15px;
+    /* Cria o espaçamento entre os itens */
 }
 
 /* Estilização dos Links (Aqui resolve o azul) */
 .sidebar ul li a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #3d3a3a;        /* Define a cor igual ao seu texto */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    color: #3d3a3a;
+    /* Define a cor igual ao seu texto */
     font-weight: 500;
     display: block;
     padding: 10px;
@@ -48,7 +55,8 @@ body {
 
 /* Efeito ao passar o mouse */
 .sidebar ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Um brilho branco suave */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Um brilho branco suave */
     color: #000;
 }
 
@@ -62,15 +70,23 @@ body {
     margin-bottom: 15px;
 }
 
-.menu-buttons {
-    width: 100%;
-    margin-top: 30px;
-    background-color: #3d3a3a;
+.btn-project {
+  display: inline-block;
+  width: fit-content;
+  min-width: 160px;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  color: #3d3a3a;
+  background-color: #ef8867;
+  font-weight: 700;
+  margin-top: auto;
 }
 
+
 .btn-menu:hover {
-    background-color: #e8f0fe;
-    color: #1967d2;
+    background-color: #ffffff;
 }
 
 /* Grade de Projetos (4 por linha) */
@@ -81,67 +97,65 @@ body {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Aqui está a mágica das 4 colunas */
+    grid-template-columns: repeat(4, 1fr);
+    /* Aqui está a mágica das 4 colunas */
     gap: 20px;
 }
 
 .card {
     background-color: #3d3a3a;
-    color:#fef7e0;
+    color: #fef7e0;
     border-radius: 12px;
-    padding: 20px;
+    padding: 24px;
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna */
-    justify-content: space-between; /* Empurra o botão para o final e o texto para o topo */
-    min-height: 250px; /* Garante que todos os cards tenham o mesmo tamanho */
+    flex-direction: column;
+    min-height: 380px;
     transition: transform 0.3s ease;
 }
 
-/* Estilização do Botão dos Cards */
-.btn-project {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ef8867; /* O laranja que você gostou */
-    color: #3d3a3a;
-    text-decoration: none;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: auto; /* Garante que ele sempre "grude" na parte de baixo */
-    align-self: flex-start; /* Mantém o botão alinhado à esquerda dentro do card */               /* Faz o botão ocupar a largura do card */
+.card h3 {
+    margin: 36px 0 0;
+    min-height: 70px;
 }
 
-/* Efeito de preenchimento ao passar o mouse */
-.btn-project:hover {
-    background-color: #ef8867;
-    color: #ffffff;
+.card p {
+    margin: 18px 0 0;
+    min-height: 90px;
 }
+
+.card .project-btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
 
 /* Etiquetas (Tags) */
 .tag {
-    display: inline-block; /* Garante que o fundo apareça corretamente */
+    display: inline-block;
+    /* Garante que o fundo apareça corretamente */
     font-size: 0.7rem;
     padding: 4px 10px;
     border-radius: 7px;
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 10px;    /* Dá um espaço entre a tag e o título do card */
+    margin-bottom: 10px;
+    /* Dá um espaço entre a tag e o título do card */
 }
 
 /* Cores das Tags */
-.web3-bg { 
-    background-color: #e8f0fe; 
-    color: #1967d2; 
+.web3-bg {
+    background-color: #e8f0fe;
+    color: #1967d2;
 }
 
-.Marketing-Estratégico { 
-    background-color: #e8f0fe; 
-    color: #452E5A; 
+.Marketing-Estratégico {
+    background-color: #e8f0fe;
+    color: #452E5A;
 }
 
-.code-bg { 
-    background-color: #fef7e0; 
-    color: #f9ab00; 
+.code-bg {
+    background-color: #fef7e0;
+    color: #f9ab00;
 }
 
 /* Tag para IA (caso você use no futuro) */
@@ -152,16 +166,19 @@ body {
 
 
 :root {
-    --primary-orange: #ff8c00; /* Laranja vibrante */
+    --primary-orange: #ff8c00;
+    /* Laranja vibrante */
     --hover-orange: #e67e22;
 }
 
 /* Rodapé sem a linha divisória */
 .footer-contact {
     width: 100%;
-    padding: 60px 0; /* Mais espaço para ficar clean */
+    padding: 60px 0;
+    /* Mais espaço para ficar clean */
     display: flex;
-    flex-direction: column; /* Botão em cima, ícone embaixo */
+    flex-direction: column;
+    /* Botão em cima, ícone embaixo */
     align-items: center;
     gap: 30px;
 }
@@ -183,11 +200,12 @@ body {
 
 .contact-btn:hover {
     background-color: #fef7e0;
-    transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+    transform: scale(1.05);
+    /* Pequeno zoom ao passar o mouse */
     box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
 }
 
 /* Removendo a seta flutuante antiga se você não quiser mais ela na lateral */
 .back-to-top {
-    display: none; 
+    display: none;
 }
