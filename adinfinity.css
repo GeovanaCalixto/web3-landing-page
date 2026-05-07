@@ -79,14 +79,10 @@ body {
 
 .ad-simulator {
     padding: 80px 8%;
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.6fr);
-    gap: 28px;
-    align-items: stretch;
+    display: block;
 }
 
 .video-panel,
-.control-panel,
 .interest-panel,
 .web3-layer {
     border: 1px solid rgba(255, 255, 255, 0.14);
@@ -125,8 +121,10 @@ body {
 }
 
 .video-screen {
-    min-height: 460px;
+    position: relative;
+    min-height: 680px;
     padding: 28px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -149,11 +147,15 @@ body {
 }
 
 .ad-overlay {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
     max-width: 520px;
     padding: 24px;
     border: 1px solid rgba(115, 247, 255, 0.35);
-    border-radius: 18px;
-    background: rgba(6, 7, 13, 0.78);
+    border-radius: 22px;
+    background: rgba(6, 7, 13, 0.72);
+    backdrop-filter: blur(18px);
     box-shadow: 0 0 40px rgba(115, 247, 255, 0.16);
 }
 
@@ -177,52 +179,40 @@ body {
     line-height: 1.6;
 }
 
-.control-panel {
-    padding: 28px;
+.ad-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
 }
 
-.control-panel h2,
-.preferences-section h2,
-.web3-layer h2 {
-    margin: 0 0 16px;
-    font-size: clamp(2rem, 4vw, 3.4rem);
-    line-height: 1;
-}
-
-.control-actions {
-    display: grid;
-    gap: 12px;
-    margin-top: 28px;
-}
-
-.control-actions button {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.08);
+.ad-actions button {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.1);
     color: #f8f7ff;
-    font-size: 1rem;
     font-weight: 800;
     cursor: pointer;
-    text-align: left;
     transition: 0.25s ease;
 }
 
-.control-actions button:hover {
-    border-color: rgba(115, 247, 255, 0.8);
-    background: rgba(115, 247, 255, 0.14);
-    transform: translateX(4px);
+.ad-actions button:hover {
+    border-color: #73f7ff;
+    background: rgba(115, 247, 255, 0.18);
 }
 
-.feedback-box {
-    min-height: 96px;
-    margin-top: 24px;
-    padding: 18px;
-    border-radius: 16px;
-    background: rgba(0, 0, 0, 0.28);
+.floating-feedback {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    max-width: 360px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.52);
     color: #c7cadc;
-    line-height: 1.6;
+    backdrop-filter: blur(16px);
+    line-height: 1.5;
 }
 
 .preferences-section {
@@ -231,6 +221,13 @@ body {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     gap: 28px;
     align-items: center;
+}
+
+.preferences-section h2,
+.web3-layer h2 {
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1;
 }
 
 .preferences-section p {
@@ -292,8 +289,6 @@ body {
 }
 
 @media (max-width: 900px) {
-
-    .ad-simulator,
     .preferences-section {
         grid-template-columns: 1fr;
     }
@@ -303,7 +298,14 @@ body {
     }
 
     .video-screen {
-        min-height: 380px;
+        min-height: 520px;
+    }
+
+    .ad-overlay,
+    .floating-feedback {
+        position: static;
+        max-width: 100%;
+        margin-top: 16px;
     }
 }
 
